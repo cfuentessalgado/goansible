@@ -59,14 +59,14 @@ func prepareSuggestions(commands []string) Installs {
 }
 
 func cleanSuggestions(suggestions *Installs) {
-    clean := Installs{}
-    for _, c := range suggestions.Commands {
-        c = strings.Replace(c, "\\", "",1)
-        if len(c) > 3 {
-            clean.Commands = append(clean.Commands, c)
-        }
-    }
-    suggestions.Commands = clean.Commands
+	clean := Installs{}
+	for _, c := range suggestions.Commands {
+		c = strings.Replace(c, "\\", "", 1)
+		if len(c) > 3 {
+			clean.Commands = append(clean.Commands, c)
+		}
+	}
+	suggestions.Commands = clean.Commands
 }
 
 type Installs struct {
